@@ -13,10 +13,10 @@ export class CreditCheckController {
     type: CreateCreditCheckResponseDto,
   })
   @ApiBadRequestResponse({
-    description: 'Account id must have 8 characters.',
+    description: 'Reference Id must have 8 characters.',
   })
   create(@Body() createCreditCheckDto: CreateCreditCheckRequestDto) {
-    if (!createCreditCheckDto.customerId || createCreditCheckDto.customerId.length !== 8) {
+    if (!createCreditCheckDto.referenceId || createCreditCheckDto.referenceId.length !== 8) {
       throw new BadRequestException();
     }
     const response: CreateCreditCheckResponseDto = this.creditCheckService.create(createCreditCheckDto);

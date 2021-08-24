@@ -4,7 +4,7 @@ import { CreateCreditCheckRequestDto, CreateCreditCheckResponseDto } from './dto
 @Injectable()
 export class CreditCheckService {
   create(createCreditCheckDto: CreateCreditCheckRequestDto) {
-    const lastChar = createCreditCheckDto.customerId.substring(createCreditCheckDto.customerId.length - 1);
+    const lastChar = createCreditCheckDto.referenceId.substring(createCreditCheckDto.referenceId.length - 1);
     let credit: number;
     switch (lastChar) {
       case '0':
@@ -41,7 +41,10 @@ export class CreditCheckService {
         break;
     }
     const creditCheck: CreateCreditCheckResponseDto = {
-      credit,
+      comment: `Credit is ${credit} because Reference ID ends with ${lastChar}`,
+      isAddressCurrent: true,
+      preApprovedCreditAmount: credit,
+      maxCreditRecommendedAmount: credit * 5,
     };
     return creditCheck;
   }
