@@ -10,7 +10,7 @@ export class CreateCreditCheckRequestDto {
   @ApiProperty({ example: 'Bank of Mars' })
   clientName: string;
 
-  @ApiProperty({ example: 2})
+  @ApiProperty({ example: 2 })
   companyAge: number;
 
   @ApiProperty({ example: 'France' })
