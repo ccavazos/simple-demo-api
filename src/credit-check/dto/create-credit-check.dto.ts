@@ -16,8 +16,8 @@ export class CreateCreditCheckRequestDto {
   @ApiProperty({ example: 'France' })
   country: string;
 
-  @ApiProperty({ example: 'Wire' })
-  defaultedPayment: string;
+  @ApiProperty({ example: true })
+  defaultedPayment: boolean;
 
   @ApiProperty({ example: 'Tim.Temple@bankofmars.com' })
   email: string;
