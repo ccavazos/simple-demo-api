@@ -57,15 +57,18 @@ export class CreateCreditCheckRequestDto {
 }
 
 export class CreateCreditCheckResponseDto {
-  @ApiProperty()
+  @ApiProperty({ example: '' })
   comment: string;
 
   @ApiProperty()
   isAddressCurrent: boolean;
 
-  @ApiProperty()
+  @ApiProperty({ example: '19000' })
   preApprovedCreditAmount: number;
 
-  @ApiProperty()
+  @ApiProperty({ example: '95000' })
   maxCreditRecommendedAmount: number;
+
+  @ApiProperty({ example: '92' })
+  creditScore: number;
 }
