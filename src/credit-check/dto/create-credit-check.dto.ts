@@ -69,6 +69,6 @@ export class CreateCreditCheckResponseDto {
   @ApiProperty({ example: '95000' })
   maxCreditRecommendedAmount: number;
 
-  @ApiProperty({ example: '92' })
+  @ApiProperty({ example: '75' })
   creditScore: number;
 }

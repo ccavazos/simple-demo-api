@@ -9,47 +9,47 @@ export class CreditCheckService {
     let creditScore: number;
     switch (lastChar) {
       case '0':
-        credit = 10000;
-        creditScore = 10;
+        credit = 100000;
+        creditScore = 67;
         break;
       case '1':
-        credit = 11000;
-        creditScore = 11;
+        credit = 110000;
+        creditScore = 70;
         break;
       case '2':
-        credit = 12000;
-        creditScore = 22;
+        credit = 120000;
+        creditScore = 73;
         break;
       case '3':
-        credit = 13000;
-        creditScore = 33;
+        credit = 130000;
+        creditScore = 76;
         break;
       case '4':
-        credit = 14000;
-        creditScore = 44;
+        credit = 140000;
+        creditScore = 79;
         break;
       case '5':
-        credit = 15000;
-        creditScore = 55;
+        credit = 150000;
+        creditScore = 82;
         break;
       case '6':
-        credit = 16000;
-        creditScore = 66;
+        credit = 160000;
+        creditScore = 85;
         break;
       case '7':
-        credit = 17000;
-        creditScore = 77;
+        credit = 170000;
+        creditScore = 88;
         break;
       case '8':
-        credit = 18000;
-        creditScore = 88;
+        credit = 180000;
+        creditScore = 91;
       case '9':
-        credit = 19000;
-        creditScore = 99;
+        credit = 190000;
+        creditScore = 94;
         break;
       default:
-        credit = 1000;
-        creditScore = 5;
+        credit = 50000;
+        creditScore = 64;
         break;
     }
     const creditCheck: CreateCreditCheckResponseDto = {
